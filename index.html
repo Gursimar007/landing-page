@@ -15,7 +15,12 @@
             --white: #ffffff;
             --grey: #888888;
             --accent: #4f46e5; 
-            --cursor-size: 20px;
+            --cursor-size: 16px; /* Scaled down from 20px */
+        }
+
+        html {
+            /* This effectively scales all rem values to 80% of standard size */
+            font-size: 12.8px; 
         }
 
         * {
@@ -50,8 +55,8 @@
         }
 
         #cursor.hovered {
-            width: 60px;
-            height: 60px;
+            width: 48px; /* Scaled down */
+            height: 48px;
             background-color: var(--white);
             opacity: 0.1;
             border: none;
@@ -73,7 +78,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 30px 5%;
+            padding: 24px 5%; /* Scaled down from 30px */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -91,22 +96,22 @@
         /* High Visibility Nav Buttons */
         .socials {
             display: flex;
-            gap: 15px;
+            gap: 12px; /* Scaled down */
         }
 
         .nav-btn {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 10px 20px;
-            border-radius: 30px;
+            padding: 8px 16px; /* Scaled down */
+            border-radius: 24px;
             color: var(--white);
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             transition: all 0.3s ease;
         }
 
@@ -114,7 +119,7 @@
             background: var(--white);
             color: var(--bg);
             transform: translateY(-2px);
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
         }
 
         /* --- Hero Section --- */
@@ -133,13 +138,13 @@
             font-weight: 800;
             line-height: 0.95;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 16px; /* Scaled down */
         }
 
         .hero-text span {
             display: block;
             opacity: 0; 
-            transform: translateY(100px);
+            transform: translateY(80px); /* Scaled down movement */
         }
 
         /* Glitch Effect */
@@ -187,25 +192,25 @@
         .sub-hero {
             font-size: 1.2rem;
             color: var(--grey);
-            max-width: 600px;
+            max-width: 480px; /* Scaled down width */
             opacity: 0;
-            margin-bottom: 40px;
+            margin-bottom: 32px; /* Scaled down */
             line-height: 1.5;
         }
 
         /* Massive Hero Buttons */
         .hero-cta-container {
             display: flex;
-            gap: 20px;
-            opacity: 0; /* Animated in by GSAP */
-            transform: translateY(20px);
+            gap: 16px; /* Scaled down */
+            opacity: 0;
+            transform: translateY(16px);
             flex-wrap: wrap;
         }
 
         .big-btn {
             background: var(--white);
             color: var(--bg);
-            padding: 18px 35px;
+            padding: 14px 28px; /* Scaled down to 80% */
             font-family: 'Syne', sans-serif;
             font-weight: 700;
             font-size: 1.1rem;
@@ -213,7 +218,7 @@
             border-radius: 4px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
@@ -221,7 +226,7 @@
 
         .big-btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 16px rgba(255, 255, 255, 0.4);
         }
 
         .big-btn.outline {
@@ -238,7 +243,7 @@
         /* --- Strip --- */
         .strip {
             width: 100%;
-            padding: 20px 0;
+            padding: 16px 0; /* Scaled down */
             background: var(--white);
             color: var(--bg);
             overflow: hidden;
@@ -265,12 +270,12 @@
         .contact-section h2 {
             font-family: 'Syne', sans-serif;
             font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 50px;
+            margin-bottom: 40px; /* Scaled down */
         }
 
         .form-box {
             border-top: 1px solid rgba(255,255,255,0.2);
-            max-width: 800px;
+            max-width: 640px; /* Scaled down max-width */
         }
 
         .input-row {
@@ -287,7 +292,7 @@
             width: 100%;
             background: transparent;
             border: none;
-            padding: 30px 20px;
+            padding: 24px 16px; /* Scaled down to 80% */
             color: var(--white);
             font-family: 'Syne', sans-serif;
             font-size: 1.2rem;
@@ -301,12 +306,12 @@
         }
 
         button.submit-btn {
-            margin-top: 40px;
-            padding: 20px 60px;
+            margin-top: 32px; /* Scaled down */
+            padding: 16px 48px; /* Scaled down */
             background: transparent;
             border: 1px solid var(--white);
             color: var(--white);
-            border-radius: 50px;
+            border-radius: 40px;
             font-family: 'Syne', sans-serif;
             font-weight: 700;
             font-size: 1rem;
@@ -320,8 +325,8 @@
         }
 
         @media(max-width: 768px) {
-            nav { padding: 20px; }
-            .nav-btn span { display: none; } /* Hide text on mobile nav, keep icon */
+            nav { padding: 16px; }
+            .nav-btn span { display: none; } 
             .hero-cta-container { flex-direction: column; width: 100%; }
             .big-btn { width: 100%; justify-content: center; }
         }
